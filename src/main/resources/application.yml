@@ -1,0 +1,25 @@
+security:
+  oauth2:
+    client:
+      clientId: 106382529136-imvh03g5b9l9cjr0omkeuuop18prvbp5.apps.googleusercontent.com
+      clientSecret: e0IXThxpqbgAbBMZ6nlH8GIj
+      accessTokenUri: https://accounts.google.com/o/oauth2/token
+      userAuthorizationUri: https://accounts.google.com/o/oauth2/auth
+      clientAuthenticationScheme: form
+      scope:
+        - openid
+        - email
+        - profile
+    resource:
+      userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+      preferTokenInfo: true
+  basic:
+    enabled: false
+
+spring:
+  session:
+    store-type: none
+  resources:
+    static-locations:  ["/**","/static/**"]
+
+
