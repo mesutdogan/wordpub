@@ -1,5 +1,6 @@
-package com.doganmesut;
+package com.doganmesut.dictionary;
 
+import com.doganmesut.word.Word;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;

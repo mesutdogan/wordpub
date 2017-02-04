@@ -256,17 +256,16 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img th:src="@{css/images/img/avatar.png}" class="user-image" alt="User Image"/>
-                            <span class="hidden-xs">Alexander Pierce</span>
+                            <img src="{{user.picture}}" class="user-image" alt="User Image"/>
+                            <span class="hidden-xs">{{user.email}}</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img th:src="@{css/images/img/avatar.png}" class="img-circle" alt="User Image"/>
-
+                                <img src="{{user.picture}}" class  ="img-circle" alt="User Image"/>
                                 <p>
-                                    Alexander Pierce - Web Developer
-                                    <small>Member since Nov. 2012</small>
+                                   {{user.name}}
+                                    <small>2017</small>
                                 </p>
                             </li>
                             <!-- Menu Body -->
@@ -290,7 +289,7 @@
                                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="#" ng-click="logout()" class="btn btn-default btn-flat">Sign out</a>
                                 </div>
                             </li>
                         </ul>
@@ -311,10 +310,10 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img th:src="@{css/images/img/avatar.png}" class="img-circle" alt="User Image"/>
+                    <img src="{{user.picture}}" class="img-circle" alt="User Image"/>
                 </div>
                 <div class="pull-left info">
-                    <p>{{user.email}}</p>
+                    <p>{{user.name}}</p>
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
@@ -392,7 +391,8 @@
                         <!-- /.box-header -->
                         <div class="box-body no-padding">
                             <table class="table table-condensed">
-                                <tbody><tr>
+                                <tbody>
+                                <tr>
                                     <th style="width: 10px">#</th>
                                     <th>Word</th>
                                     <th>Meaning</th>
@@ -404,7 +404,8 @@
                                     <td>{{word.meaning}}</td>
                                     <td><span class="badge bg-red">55%</span></td>
                                 </tr>
-                                </tbody></table>
+                                </tbody>
+                            </table>
                         </div>
                         <!-- /.box-body -->
                     </div>
@@ -644,14 +645,24 @@
 <script>
 
     var app = angular.module('myApp', []);
-    app.controller('homeController', function ($scope, $http) {
+    app.controller('homeController', function ($scope, $http,$location) {
 
-        $http.get('/user/find', {
-            params: {email: "doganmesut01@gmail.com"}
-        }).then(function (response) {
+        $http.get('/user/authenticated', {}).then(function (response) {
             console.log(response);
-            $scope.user = response.data;
+            $scope.user  = response.data.userAuthentication.details;
+
+            $http.get('/user/find?email='+$scope.user.email+'',{}).then(function (response) {
+                console.log(response);
+                $scope.user.dictionary = response.data.dictionary;
+            });
         });
+
+        $scope.logout = function () {
+            $http.post('/logout', {}).then(function (response) {
+                console.log('Logging out... ');
+                window.location.href="/";
+            })
+        }
     });
 </script>
 </html>

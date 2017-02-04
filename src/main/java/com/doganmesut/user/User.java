@@ -1,5 +1,6 @@
-package com.doganmesut;
+package com.doganmesut.user;
 
+import com.doganmesut.dictionary.Dictionary;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;

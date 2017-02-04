@@ -1,5 +1,6 @@
-package com.doganmesut;
+package com.doganmesut.dictionary;
 
+import com.doganmesut.AppService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

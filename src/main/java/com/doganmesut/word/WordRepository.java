@@ -1,4 +1,4 @@
-package com.doganmesut;
+package com.doganmesut.word;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public interface DictionaryRepository extends MongoRepository<Dictionary, String> {
+public interface WordRepository extends MongoRepository<Word, String> {
 }

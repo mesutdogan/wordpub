@@ -1,5 +1,7 @@
 package com.doganmesut;
 
+import com.doganmesut.user.User;
+import com.doganmesut.user.UserService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

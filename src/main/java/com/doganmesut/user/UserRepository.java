@@ -1,4 +1,4 @@
-package com.doganmesut;
+package com.doganmesut.user;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;

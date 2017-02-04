@@ -1,16 +1,12 @@
-package com.doganmesut;
+package com.doganmesut.word;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.doganmesut.dictionary.Dictionary;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
 
-import javax.persistence.Entity;
-import javax.persistence.UniqueConstraint;
 import java.util.Date;
 
 /**

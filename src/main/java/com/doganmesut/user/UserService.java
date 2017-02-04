@@ -1,7 +1,8 @@
-package com.doganmesut;
+package com.doganmesut.user;
 
 import java.util.List;
 
+import com.doganmesut.AppService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
