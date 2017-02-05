@@ -1,9 +1,9 @@
 package com.doganmesut.word;
 
-import com.doganmesut.user.User;
-import com.doganmesut.user.UserService;
 import com.doganmesut.dictionary.Dictionary;
 import com.doganmesut.dictionary.DictionaryService;
+import com.doganmesut.user.User;
+import com.doganmesut.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by ryuk on 15.01.2017.
+ * @author Mesut Dogan <doganmesut01@gmail.com>
+ * @version 0.0.1
  */
 
 @RestController

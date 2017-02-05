@@ -11,7 +11,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by ryuk on 24.01.2017.
+ * @author Mesut Dogan <doganmesut01@gmail.com>
+ * @version 0.0.1
  */
 
 @Document

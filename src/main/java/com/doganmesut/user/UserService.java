@@ -1,13 +1,14 @@
 package com.doganmesut.user;
 
-import java.util.List;
-
 import com.doganmesut.AppService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
- * Created by ryuk on 24.01.2017.
+ * @author Mesut Dogan <doganmesut01@gmail.com>
+ * @version 0.0.1
  */
 
 @Service

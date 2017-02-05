@@ -10,7 +10,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
 
 /**
- * @author Mesut Dogan
+ * @author Mesut Dogan <doganmesut01@gmail.com>
+ * @version 0.0.1
  */
 
 @Document

@@ -2,16 +2,18 @@ package com.doganmesut.user;
 
 import com.doganmesut.dictionary.Dictionary;
 import com.doganmesut.dictionary.DictionaryService;
-import com.doganmesut.word.Word;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
 
 /**
- * Created by ryuk on 26.01.2017.
+ * @author Mesut Dogan <doganmesut01@gmail.com>
+ * @version 0.0.1
  */
-
 @RestController
 @RequestMapping("/user")
 public class UserController {

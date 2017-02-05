@@ -3,7 +3,8 @@ package com.doganmesut;
 import java.util.List;
 
 /**
- * Created by ryuk on 24.01.2017.
+ * @author Mesut Dogan <doganmesut01@gmail.com>
+ * @version 0.0.1
  */
 public interface AppService<T> {
     T save(T t);
