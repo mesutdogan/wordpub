@@ -24,16 +24,16 @@ public class WordService implements AppService<Word> {
 
     @Override
     public void delete(String id) {
-
+        wordRepository.delete(id);
     }
 
     @Override
     public Word findOne(String id) {
-        return null;
+        return wordRepository.findOne(id);
     }
 
     @Override
     public List<Word> findAll() {
-        return null;
+        return wordRepository.findAll();
     }
 }

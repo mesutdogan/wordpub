@@ -28,7 +28,7 @@ public class Word {
     @DBRef
     private Dictionary dictionary;
 
-    private Date createDate;
+    private Date createDate = new Date();
 
     public Dictionary getDictionary() {
         return dictionary;

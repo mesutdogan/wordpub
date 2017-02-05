@@ -5,7 +5,9 @@ import com.doganmesut.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * @author Mesut Dogan <doganmesut01@gmail.com>
@@ -17,11 +19,22 @@ public class Publisher {
     private UserService userService;
 
     @Scheduled(cron = "0 * * * * *")
-    public void publishNotification(){
+    public void publishNotification() {
         List<User> users = userService.findAll();
+        Stream<User> userStream = users.stream();
+
+
+        userStream.max(new Comparator<User>() {
+            @Override
+            public int compare(User o1, User o2) {
+                return 0;
+            }
+        });
 
         for (User user : users) {
             // not implemented yet.
         }
+
+        Runnable hi = () -> System.out.println("hi");
     }
 }
